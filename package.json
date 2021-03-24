@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "electron .",
+    "start": "concurrently \"npm run start:render\"  \"wait-on http://localhost:3000 && npm run start:main",
     "start:main": "electron .",
     "start:render": "cd app/renderer/src/main && npm start"
   },
@@ -25,7 +26,9 @@
     "react-scripts": "^4.0.3"
   },
   "devDependencies": {
+    "concurrently": "^6.0.0",
     "customize-cra": "^1.0.0",
-    "react-app-rewired": "^2.1.8"
+    "react-app-rewired": "^2.1.8",
+    "wait-on": "^5.3.0"
   }
 }
