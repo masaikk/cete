@@ -13,7 +13,7 @@ function create() {
             // preload: __dirname + '/preload.js'
         }
     })
-        win.loadFile(path.resolve(__dirname, '../../renderer/pages/control/index.html'))
+        win.loadFile(path.resolve(__dirname, '../../renderer/pages/control/testGetDeskStream.html'))
 
 }
 module.exports={create}
